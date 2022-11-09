@@ -1,0 +1,87 @@
+Git configurations:
+$ git config --global user.name "FirstName LastName"
+$ git config --global user.email "your mail id"
+$ git config --global color.ui true
+$ git config --list
+
+
+Starting a New Local Repository with Git:
+$ git init
+$ git status                                 # to check the status of repo
+
+
+Staging the files:
+$ git add <file-name/s>
+$ git add .                                 # to add all the files in the folder
+$ git add --all
+$ git add -A
+
+
+Unstaging a file:
+$ git rm --cached <file>
+$ git reset <file>                           # an alternative
+
+
+Committing Changes to Git:
+$ git commit -m "Your Message"            # -m for message that has to be displayed
+$ git commit -a -m "Your Message"         # -a for add
+
+
+Undo the commit:
+$ git reset --soft HEAD^                  # --soft means that the commit is cancelled and moved before HEAD
+                                          # “head” is just a reference to a commit
+                                          # HEAD points to current being checked out
+                                          # "^" represents the last commit
+							   # This means Undo the last commit in the current branch and move HEAD back by one commit
+
+
+
+Over-writing the message:
+$ git commit --amend -m "Your Message"         # "--amend" overwrites the message of your last commit
+
+
+Push and Pull To and From a Remote Repository:
+$ git remote add [name] [link]            # remote -v to get more information
+$ git commit                              # commiting the chamges
+$ git push <remote_name> <branch_name>
+$ git push origin master
+
+$ git pull <remote_name> <branch_name>
+$ git remote -v                            # "-v" lists all remote repositories
+
+
+Checking logs and history:
+$ git log
+$ git log --oneline                       # --oneline when using git log to get a prettier result.
+
+
+Clone the repository to the folder:
+$ git clone <url>                        # run git bash on that folder, run the command to clone the repo
+$ git clone git@github.com:YourUsername/your-app.git
+$ git clone git@github.com:YourUsername/your-app.git preferred-name
+
+
+Git Fork:
+$ git fork <url>
+
+
+Create a branch:
+$ git branch branch-name
+$ git branch                             # To check if the branch has been created
+
+
+Switching to another branch:
+$ git checkout branch-name
+$ git push origin branch-name
+
+
+Git Merge:
+$ git merge <branch_name>                       # merge the branch_name to the working branch
+
+
+Deleting the branch:
+$ git branch -d branch_name                 # d for delete
+
+
+Creating and Switching to new branch
+$ git checkout -b branch_name
