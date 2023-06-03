@@ -80,8 +80,56 @@ $ git merge <branch_name>                       # merge the branch_name to the w
 
 
 Deleting the branch:
-$ git branch -d branch_name                 # d for delete
+$ git branch -d branch_name                 	# d for delete
 
 
 Creating and Switching to new branch
 $ git checkout -b branch_name
+
+
+Pull the .git file and related files from the repo (pull without comparision)
+NOTE: Run merge command to merge 2 unrelated git files i.e. $ git merge origin/master --allow-unrelated-histories
+Then, run $ git push -u origin master to push the merged files and folders to the repo. This keeps the previous commits in the repo intact and it doesn't change with new push or commits
+$ git fetch origin
+
+
+Pull the .git file and related files from repo (when having similar commit history)
+NOTE: Else it raises the error: Merge unrelated histories error
+Combination of $ git fetch and $ git merge
+$ git pull
+
+
+Pull Request
+$ git pull 'repo_name' 'branch_name'
+Merge the branch from a remote to a local branch also 'repo_name' is the repository name and 'branch_name' is the name of the specific branch
+NOTE: This is when origin is not referenced
+
+
+Procedure for git pull 
+NOTE: Done after referencing to repositry i.e. after $ git remote add origin <repo url>
+$ git stash
+$ git pull
+$ git stash apply 
+
+(OR)
+
+$ git stash
+$ git pull
+$ git stash pop
+
+
+Merge 2 unrelated .git files having different commit histories (on local)
+$ git merge origin/master --allow-unrelated-histories
+
+
+Force Push
+NOTE: It overwrites the contents of the repo
+$ git push origin <your_branch_name> --force
+
+(OR)
+
+$ git push <repo url> --force
+
+(OR)
+
+$ git push origin <your_branch_name> -f
