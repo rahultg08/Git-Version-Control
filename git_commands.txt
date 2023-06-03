@@ -133,3 +133,12 @@ $ git push <repo url> --force
 (OR)
 
 $ git push origin <your_branch_name> -f
+
+
+Deleting a Local Branch
+$ git branch -d <local-branch>
+
+
+Delete remote branch
+To delete a remote branch, you need to use the "git push" command
+$ git push origin --delete <remote-branch-name>
