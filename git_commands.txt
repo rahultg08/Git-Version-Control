@@ -147,6 +147,18 @@ $ git push origin --delete <remote-branch-name>
 
 
 -------------x-------Anaconda--------x---------------------
+Clear the anaconda terminal
+cls
+
+
+Getting the location of anaconda
+where conda
+
+
+Getting the anaconda version
+conda --version
+
+
 Creating conda environment
 conda create --name env-name
 
