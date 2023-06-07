@@ -142,3 +142,21 @@ $ git branch -d <local-branch>
 Delete remote branch
 To delete a remote branch, you need to use the "git push" command
 $ git push origin --delete <remote-branch-name>
+
+
+
+
+-------------x-------Anaconda--------x---------------------
+Creating conda environment
+conda create --name env-name
+
+
+Create conda environment with specific python version
+conda create -n env-name python=3.9
+
+
+Activate conda environment
+conda avtivate env-name
+
+
+NOTE: Better to create environment then install the required packages for the project because, system internal configurations and installations might be disrupted
