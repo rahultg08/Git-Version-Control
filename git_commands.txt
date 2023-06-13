@@ -168,7 +168,7 @@ conda create -n env-name python=3.9
 
 
 Activate conda environment
-conda avtivate env-name
+conda activate env-name
 
 
 NOTE: Better to create environment then install the required packages for the project because, system internal configurations and installations might be disrupted
